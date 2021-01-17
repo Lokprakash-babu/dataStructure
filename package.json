@@ -1,0 +1,15 @@
+{
+  "name": "@lokprakash/test",
+  "version": "4.0.0",
+  "description": "This package contains data structures like stack, queue, binary tree...",
+  "main": "structures.mjs",
+  "type": "module",
+  "keywords": [
+    "data structure",
+    "data-structure",
+    "npm"
+  ],
+  "author": "Lokprakash Babu",
+  "license": "MIT",
+  "repository": 
+}
