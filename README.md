@@ -41,11 +41,4 @@ let newStack = new structures.stack();
 </div>
 
 </div>
-<<<<<<< HEAD
 
-
-
-
-
-=======
->>>>>>> 601c7e01d6029ba83ee6b0eb2d2b1ac32cc688da
