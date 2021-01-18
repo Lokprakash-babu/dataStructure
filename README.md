@@ -1,4 +1,4 @@
-# @lokprakash/Ds
+# @lokprakash/datastructure
 
 This package helps you in adding data structures like binary tree, stack and many more(in future updates). You can import this package in any JS file and start adding data to the complex data structures. Documentation will be released soon. 
 
