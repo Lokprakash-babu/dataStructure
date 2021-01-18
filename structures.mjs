@@ -1,7 +1,7 @@
 
 
 
-export function BinaryTree(value) {
+function BinaryTree(value) {
     var _this = this;
 
 
@@ -26,7 +26,7 @@ export function BinaryTree(value) {
     this.right = null;
 };
 
-export function Stack() {
+function Stack() {
     var _this2 = this;
 
 
@@ -57,7 +57,7 @@ export function Stack() {
     this.top = null;
 };
 
-export function Queue() {
+function Queue() {
     var _this3 = this;
 
 
@@ -84,7 +84,7 @@ export function Queue() {
     this.top = null;
 };
 
-export function LinkedList(value) {
+function LinkedList(value) {
     var _this4 = this;
 
     
@@ -100,3 +100,9 @@ export function LinkedList(value) {
     this.value = value;
 };
 
+module.exports={
+    BinaryTree: BinaryTree,
+    Stack: Stack,
+    Queue: Queue,
+    LinkedList: LinkedList
+};
