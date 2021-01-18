@@ -24,7 +24,7 @@ Import the package in your JS file
 
 Eg, 
 
-import * as ds from '@lokprakash/datastructures';
+import * as ds from '@lokprakash/datastructure';
 
 
 //Binary tree
