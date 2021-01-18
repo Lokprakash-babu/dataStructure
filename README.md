@@ -29,9 +29,9 @@ import * as ds from '@lokprakash/datastructure';
 
 //Binary tree
 
-let binaryTreeNode1=new ds.binaryTree(5); //create a node with value of 5. Attributes are value, left, right.
-let binaryTreeNode2=new ds.binaryTree(4);
-let binaryTreeNode3=new ds.binaryTree(10);
+let binaryTreeNode1=new ds.BinaryTree(5); //create a node with value of 5. Attributes are value, left, right.
+let binaryTreeNode2=new ds.BinaryTree(4);
+let binaryTreeNode3=new ds.BinaryTree(10);
 
 binaryTreeNode1.addLeft(binaryTreeNode2); //This will add a node to the left 
 binaryTreeNode1.addRight(binaryTreeNode3); //This will add a node to the right
