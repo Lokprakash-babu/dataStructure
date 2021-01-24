@@ -100,9 +100,93 @@ function LinkedList(value) {
     this.value = value;
 };
 
+
+
+function Heap() {
+    var _this = this;
+    this.addElement = function (value) {
+        _this.elements.push(value);
+        heapify(_this.elements, false);
+    };
+
+    this.removeElement = function () {
+        if (_this.elements.length === 1) {
+            return -1;
+        }
+        var value = _this.elements[1];
+        heapify(_this.elements, true);
+        return value;
+    };
+
+    this.size = function () {
+        return _this.elements.length - 1;
+    };
+
+    this.elements = [0];
+};
+
+function heapify(elements, isDeleted){
+    if(isDeleted){
+        let val=elements[elements.length-1];
+        elements[elements.length-1]=elements[1];
+        elements[1]=val;
+        elements.pop();
+        modifyHeap(elements, 1);
+    }
+    else{
+        constructHeap(elements, elements.length-1);
+    }
+}
+
+function constructHeap(elements, index){
+    let parent=Math.floor(index/2);
+    if(elements[parent]<elements[index] && parent!=0){
+        let val=elements[parent];
+        elements[parent]=elements[index];
+        elements[index]=val;
+        constructHeap(elements, parent);
+    }
+    else{
+        return;
+    }
+}
+
+function modifyHeap(elements, index){
+
+    let left=2*index;
+    let right=2*index+1;
+
+    if(left<elements.length){
+        if(right<elements.length){
+            if(elements[left]>=elements[index] && elements[right]<=elements[left]){
+                swap(elements, left, index);
+                modifyHeap(elements, left);
+            }
+            else if( elements[right]>=elements[index] && elements[left]<=elements[right]){
+                swap(elements, right, index);
+                modifyHeap(elements, right);
+            }
+        }
+        else{
+            if(elements[left]>elements[index]){
+                swap(elements, left, index);
+                modifyHeap(elements, left);
+            }
+        }
+    }
+}
+
+function swap(elements, i, j){
+    let val=elements[i];
+    elements[i]=elements[j];
+    elements[j]=val;
+}
+
+
 module.exports={
     BinaryTree: BinaryTree,
     Stack: Stack,
     Queue: Queue,
-    LinkedList: LinkedList
+    LinkedList: LinkedList,
+    Heap:Heap
 };
