@@ -26,80 +26,82 @@ Import the package in your JS file
 
 Eg, 
 
-import * as ds from '@lokprakash/datastructure';
 
 
-//Binary tree
-
-let binaryTreeNode1=new ds.BinaryTree(5); //create a node with value of 5. Attributes are value, left, right.
-let binaryTreeNode2=new ds.BinaryTree(4);
-let binaryTreeNode3=new ds.BinaryTree(10);
-
-binaryTreeNode1.addLeft(binaryTreeNode2); //This will add a node to the left 
-binaryTreeNode1.addRight(binaryTreeNode3); //This will add a node to the right
-
-console.log('value of node 1', binaryTreeNode1.value);
-console.log('left node of node 1', binaryTreeNode1.left);
-console.log('right node of node 1', binaryTreeNode1.right);
+        import * as ds from '@lokprakash/datastructure';
 
 
-//Stack
+        //Binary tree
 
-let stack=new ds.Stack();
+        let binaryTreeNode1=new ds.BinaryTree(5); //create a node with value of 5. Attributes are value, left, right.
+        let binaryTreeNode2=new ds.BinaryTree(4);
+        let binaryTreeNode3=new ds.BinaryTree(10);
 
-stack.pushValue(1); //this will push value 1 into the stack
-stack.pushValue(2);
-stack.pushValue(3); 
+        binaryTreeNode1.addLeft(binaryTreeNode2); //This will add a node to the left 
+        binaryTreeNode1.addRight(binaryTreeNode3); //This will add a node to the right
 
-
-console.log('top value of stack', stack.getTop());
-console.log('Length of the stack', stack.getLength());
-console.log('Pop the top value of the stack and return it', stack.popValue());
-
-//Queue
-
-let queue=new ds.Queue();
-
-queue.pushValue(1);
-queue.pushValue(2);
-queue.pushValue(3); //adds a value into the queue
-
-console.log(queue.popValue()); //pop the first value in the queue and returns it
-console.log(queue.getLength()); //get the current length of the queue
-console.log(queue.getTop()); //returns the first value of the queue but won't pop it out
-
-//Linked List
-
-let linkedListNode=new ds.LinkedList(1);  //this will create a node with value of 1 and the next pointer with value of null by default
-
-let linkedListNode2=new ds.LinkedList(2);
-
-linkedListNode.addNext(linkedListNode2); //this will change the "next" pointer to point to the linkedListNode2
-
-let node=linkedListNode;
-
-while(node!=null){
-    
-    console.log(node.value);  //prints the node value
-
-    //increment the node pointer
-    node=node.next;  
-}
+        console.log('value of node 1', binaryTreeNode1.value);
+        console.log('left node of node 1', binaryTreeNode1.left);
+        console.log('right node of node 1', binaryTreeNode1.right);
 
 
-//Max heap
+        //Stack
 
-let heap=new ds.Heap();
+        let stack=new ds.Stack();
+
+        stack.pushValue(1); //this will push value 1 into the stack
+        stack.pushValue(2);
+        stack.pushValue(3); 
 
 
-//Insert 10 to the heap;
-heap.addElement(10); 
+        console.log('top value of stack', stack.getTop());
+        console.log('Length of the stack', stack.getLength());
+        console.log('Pop the top value of the stack and return it', stack.popValue());
 
-//Insert 20 to the heap;
-heap.addElement(20);
+        //Queue
 
-//get the root value of the heap
-let val=heap.removeElement();
+        let queue=new ds.Queue();
 
-//get the size of the heap
-console.log('heap size', heap.size());
+        queue.pushValue(1);
+        queue.pushValue(2);
+        queue.pushValue(3); //adds a value into the queue
+
+        console.log(queue.popValue()); //pop the first value in the queue and returns it
+        console.log(queue.getLength()); //get the current length of the queue
+        console.log(queue.getTop()); //returns the first value of the queue but won't pop it out
+
+        //Linked List
+
+        let linkedListNode=new ds.LinkedList(1);  //this will create a node with value of 1 and the next pointer with value of null by default
+
+        let linkedListNode2=new ds.LinkedList(2);
+
+        linkedListNode.addNext(linkedListNode2); //this will change the "next" pointer to point to the linkedListNode2
+
+        let node=linkedListNode;
+
+        while(node!=null){
+            
+            console.log(node.value);  //prints the node value
+
+            //increment the node pointer
+            node=node.next;  
+        }
+
+
+        //Max heap
+
+        let heap=new ds.Heap();
+
+
+        //Insert 10 to the heap;
+        heap.addElement(10); 
+
+        //Insert 20 to the heap;
+        heap.addElement(20);
+
+        //get the root value of the heap
+        let val=heap.removeElement();
+
+        //get the size of the heap
+        console.log('heap size', heap.size());
