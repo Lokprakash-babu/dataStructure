@@ -79,8 +79,8 @@ linkedListNode.addNext(linkedListNode2); //this will change the "next" pointer t
 let node=linkedListNode;
 
 while(node!=null){
-    //prints the node value
-    console.log(node.value); 
+    
+    console.log(node.value);  //prints the node value
 
     //increment the node pointer
     node=node.next;  
