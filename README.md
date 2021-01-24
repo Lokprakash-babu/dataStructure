@@ -14,6 +14,8 @@ Queue
 
 Linked list
 
+Heap (Max Heap)
+
 <a href="https://github.com/Lokprakash-babu/dataStructure/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Lokprakash-babu/dataStructure"></a>  <a href="https://github.com/Lokprakash-babu/dataStructure/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/Lokprakash-babu/dataStructure"></a> 
 
 Official documentation will be released soon . . .
@@ -29,12 +31,16 @@ import * as ds from '@lokprakash/datastructure';
 
 //Binary tree
 
-let binaryTreeNode1=new ds.BinaryTree(5); //create a node with value of 5. Attributes are value, left, right.
+//create a node with value of 5. Attributes are value, left, right.
+let binaryTreeNode1=new ds.BinaryTree(5); 
 let binaryTreeNode2=new ds.BinaryTree(4);
 let binaryTreeNode3=new ds.BinaryTree(10);
 
-binaryTreeNode1.addLeft(binaryTreeNode2); //This will add a node to the left 
-binaryTreeNode1.addRight(binaryTreeNode3); //This will add a node to the right
+//This will add a node to the left 
+binaryTreeNode1.addLeft(binaryTreeNode2); 
+
+//This will add a node to the right
+binaryTreeNode1.addRight(binaryTreeNode3); 
 
 console.log('value of node 1', binaryTreeNode1.value);
 console.log('left node of node 1', binaryTreeNode1.left);
@@ -45,7 +51,8 @@ console.log('right node of node 1', binaryTreeNode1.right);
 
 let stack=new ds.Stack();
 
-stack.pushValue(1); //this will push value 1 into the stack
+//this will push value 1 into the stack
+stack.pushValue(1); 
 stack.pushValue(2);
 stack.pushValue(3); 
 
@@ -58,27 +65,55 @@ console.log('Pop the top value of the stack and return it', stack.popValue());
 
 let queue=new ds.Queue();
 
+//adds a value into the queue
+
 queue.pushValue(1);
 queue.pushValue(2);
-queue.pushValue(3); //adds a value into the queue
+queue.pushValue(3); 
 
-console.log(queue.popValue()); //pop the first value in the queue and returns it
-console.log(queue.getLength()); //get the current length of the queue
-console.log(queue.getTop()); //returns the first value of the queue but won't pop it out
+//pop the first value in the queue and returns it
+console.log(queue.popValue()); 
+
+//get the current length of the queue
+console.log(queue.getLength()); 
+
+//returns the first value of the queue but won't pop it out
+console.log(queue.getTop()); 
 
 //Linked List
 
-let linkedListNode=new ds.LinkedList(1);  //this will create a node with value of 1 and the next pointer with value of null by default
+//this will create a node with value of 1 and the next pointer with value of null by default
+let linkedListNode=new ds.LinkedList(1);  
 
 let linkedListNode2=new ds.LinkedList(2);
 
-linkedListNode.addNext(linkedListNode2); //this will change the "next" pointer to point to the linkedListNode2
+//this will change the "next" pointer to point to the linkedListNode2
+linkedListNode.addNext(linkedListNode2); 
 
 let node=linkedListNode;
 
 while(node!=null){
-    console.log(node.value); //prints the node value
-    node=node.next; //increment the node pointer 
+    //prints the node value
+    console.log(node.value); 
+
+    //increment the node pointer
+    node=node.next;  
 }
 
 
+//Max heap
+
+let heap=new ds.Heap();
+
+
+//Insert 10 to the heap;
+heap.addElement(10); 
+
+//Insert 20 to the heap;
+heap.addElement(20);
+
+//get the root value of the heap
+let val=heap.removeElement();
+
+//get the size of the heap
+console.log('heap size', heap.size());
