@@ -2,7 +2,9 @@
 
 This package helps you in adding data structures like binary tree, stack and many more(in future updates). You can import this package in any JS file and start building complex data structures. Documentation will be released soon. 
 
-Recent update: Added Queue and Linked list. 
+Recent update: Added Max heap.
+
+Next update: Min heap. 
 
 Available data structures(As of now): 
 
